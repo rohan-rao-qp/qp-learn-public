@@ -27,13 +27,16 @@ export class Order {
 
   private applyDiscount(): void {
     this.discountedPrice =
-      this.totalPrice -
-      this.totalPrice * this.customer.getDiscountByCustomerType();
+      this.totalPrice - this.totalPrice * this.customer.getDiscountByType();
+  }
+
+  private getItems(): string {
+    return this.items.join(", ");
   }
 
   printOrder(): void {
     console.log(`Customer: ${this.customer.getName()}`);
-    console.log(`Items: ${this.items.join(", ")}`);
+    console.log(`Items: ${this.getItems()}`);
     console.log(`Total Price: ${this.totalPrice}`);
     console.log(`Discounted Price: ${this.discountedPrice}`);
   }
