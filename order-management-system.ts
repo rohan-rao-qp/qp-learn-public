@@ -26,7 +26,7 @@ class OrderManagementSystem {
     OrderManagementSystem.generateInvoice(order);
   }
 
-  static generateInvoice(order: Order): void {
+  private static generateInvoice(order: Order): void {
     console.log("Generating Invoice...");
     console.log(`Customer: ${order.customer.name}`);
     console.log(`Total: $${order.totalPrice}`);
