@@ -23,7 +23,7 @@ export class Customer {
     return this.type;
   }
 
-  getDiscountByCustomerType(): number {
+  getDiscountByType(): number {
     switch (this.type) {
       case CustomerType.REGULAR:
         return REGULAR_CUSTOMER_DISCOUNT;
